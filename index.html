@@ -6,58 +6,62 @@
     <title>Сайт</title>
     <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
   </head>
-  <body background-color: rgb(0, 0, 0)>
-    <div class="fs">
-      <p class="name">DECHHI</p>
-
-      <img class="fon_img" src="/assets/images/fon.png" />
-
-      <img class="obl_img" src="/assets/images/hero.png" />
-
-      <div class="dg">
-        <p>Digital Artist</p>
+  <body>
+    <!-- background-color: rgb(0, 0, 0) -->
+    <div class="hero__container">
+      <div class="hero__main">
+        <img class="hero__image" src="/assets/images/hero.png" />
+        <p class="hero__title">DECHHI</p>
       </div>
-
-      <a href="https://ych.commishes.com/user/dech/" target="_blank">
-        <button class="YCHcom">
-          <p>YCH.Commishes</p>
-        </button>
-      </a>
-
-      <a href="https://vk.com/dechhi" target="_blank">
-        <button class="VK">
-          <p>VK</p>
-        </button>
-      </a>
-
-      <a href="https://hipolink.me/dech/tips" target="_blank">
-        <button class="Hipolink">
-          <p>Hipolink</p>
-        </button>
-      </a>
-    </div>
-
-    <div class="sc">
-      <div class="del">
-        <p>Gallery and price list</p>
-      </div>
-
-      <div class="price"></div>
-
-      <div class="sl-cn">
-        <div class="slider">
-          <img src="/assets/images/2.png" class="slide" />
-          <img src="/assets/images/3.png" class="slide" />
-          <img src="/assets/images/4.png" class="slide" />
-          <img src="/assets/images/5.png" class="slide" />
+      <div class="hero__links">
+        <div class="hero__links__title">
+          <p>Digital Artist</p>
+        </div>
+        <div class="hero__links__container">
+          <div class="hero__links__list">
+            <a
+              class="VK"
+              href="https://ych.commishes.com/user/dech"
+              target="_blank"
+            >
+              YCH.Commishes
+            </a>
+            <a class="VK" href="https://vk.com/dechhi" target="_blank"> VK </a>
+            <a
+              class="Hipolink"
+              href="https://hipolink.me/dech/tips"
+              target="_blank"
+            >
+              Hipolink
+            </a>
+          </div>
+          <img class="hero__links__decor" src="/assets/images/fon.png" />
         </div>
       </div>
-      <img class="fon2" src="/assets/images/fon.png" />
+    </div>
+
+    <div class="gallery__container">
+      <div class="gallery__title">
+        <p>Gallery and price list</p>
+      </div>
+      <div class="gallery__slider__container">
+        <img class="gallery__slider__decor" src="/assets/images/fon.png" />
+        <div class="gallery__slider__wrapper">
+          <div class="gallery__slider">
+            <img src="/assets/images/2.png" class="slide" />
+            <img src="/assets/images/3.png" class="slide" />
+            <img src="/assets/images/4.png" class="slide" />
+            <img src="/assets/images/5.png" class="slide" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript">
       let currentIndex = 0;
-      const slides = document.querySelectorAll(".slide");
+      const slides = document.querySelectorAll(
+        ".gallery__container .gallery__slider__container .gallery__slider img"
+      );
       const slideInterval = 3000;
 
       function changeSlide() {
