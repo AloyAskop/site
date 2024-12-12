@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сайт</title>
-    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <title>Dechhi Digital Artist</title>
+    <link href="./assets/css/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <!-- background-color: rgb(0, 0, 0) -->
     <div class="hero__container">
       <div class="hero__main">
-        <img class="hero__image" src="/assets/images/hero.png" />
+        <img class="hero__image" src="./assets/images/hero.png" />
         <p class="hero__title">DECHHI</p>
       </div>
       <div class="hero__links">
@@ -35,7 +34,11 @@
               Hipolink
             </a>
           </div>
-          <img class="hero__links__decor" src="/assets/images/fon.png" />
+          <img class="hero__links__decor" src="./assets/images/fon.png" />
+          <img
+            class="hero__links__decor mobile"
+            src="./assets/images/fon-horizontal.png"
+          />
         </div>
       </div>
     </div>
@@ -45,15 +48,71 @@
         <p>Gallery and price list</p>
       </div>
       <div class="gallery__slider__container">
-        <img class="gallery__slider__decor" src="/assets/images/fon.png" />
-        <div class="gallery__slider__wrapper">
-          <div class="gallery__slider">
-            <img src="/assets/images/2.png" class="slide" />
-            <img src="/assets/images/3.png" class="slide" />
-            <img src="/assets/images/4.png" class="slide" />
-            <img src="/assets/images/5.png" class="slide" />
+        <img class="gallery__slider__decor" src="./assets/images/fon.png" />
+        <div class="gallery__price">
+          <p class="gallery__price__title">Price</p>
+          <div class="gallery__price__list">
+            <div class="gallery__price__category">
+              <div class="gallery__price__category__title">
+                <p>Character</p>
+              </div>
+              <div class="gallery__price__category__list">
+                <div class="gallery__price__category__item">
+                  <p>Half</p>
+                  <div class="dots"></div>
+                  <p>15 USD</p>
+                </div>
+                <div class="gallery__price__category__item">
+                  <p>Full</p>
+                  <div class="dots"></div>
+                  <p>30 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__price__category">
+              <div class="gallery__price__category__list">
+                <div class="gallery__price__category__item">
+                  <p>Additional character</p>
+                  <div class="dots"></div>
+                  <p>+100%</p>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__price__category">
+              <div class="gallery__price__category__title">
+                <p>Background</p>
+              </div>
+              <div class="gallery__price__category__list">
+                <div class="gallery__price__category__item">
+                  <p>Simple</p>
+                  <div class="dots"></div>
+                  <p>Free</p>
+                </div>
+                <div class="gallery__price__category__item">
+                  <p>Complex</p>
+                  <div class="dots"></div>
+                  <p>5 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__price__footer">
+              <p>Prepayment - 30%</p>
+              <p>Deadline - month</p>
+            </div>
           </div>
         </div>
+        <div class="gallery__slider__wrapper">
+          <div class="gallery__slider">
+            <img src="./assets/images/2.png" class="slide" />
+            <img src="./assets/images/3.png" class="slide" />
+            <img src="./assets/images/4.png" class="slide" />
+            <img src="./assets/images/5.png" class="slide" />
+          </div>
+        </div>
+        <img
+          class="gallery__slider__decor mobile"
+          src="./assets/images/fon-horizontal.png"
+        />
       </div>
     </div>
 
