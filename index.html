@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href = "stylesheet.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body background-color: rgb(0, 0, 0)>
+
+    <div class="fs">
+<p class="name">DECHHI</p>
+
+        <img class="fon_img"
+        src="fon.png"
+        />
+
+        <img class="obl_img"
+        src="обл.png"
+        />
+
+   <div class="dg">
+        <p>Digital Artist</p>
+    </div>
+
+    <a href="https://ych.commishes.com/user/dech/" target="_blank">
+   <button class="YCHcom">
+        <p>YCH.Commishes</p>
+   </button>
+        </a>
+
+        <a href="https://vk.com/dechhi" target="_blank">
+   <button class="VK">
+        <p>VK</p>
+   </button>
+        </a>
+
+        <a href="https://hipolink.me/dech/tips" target="_blank">
+   <button class="Hipolink">
+        <p>Hipolink</p>
+   </button>
+        </a>
+    </div>
+
+<div class="sc">
+
+    <div class="del">
+<p>Gallery and price list</p>
+    </div>
+
+    <div class="price">
+
+    </div>
+  
+    <div class="sl-cn">
+        <div class="slider">
+           
+            <img
+            src="2.png" class="slide"
+            />
+            <img
+            src="3.png" class="slide"
+            />
+            <img
+            src="4.png" class="slide"
+            />
+            <img
+            src="5.png" class="slide"
+            />
+        </div>
+
+        <script>
+            let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const slideInterval = 3000;
+ 
+function changeSlide() {
+  slides[currentIndex].style.opacity = 0;
+  currentIndex = (currentIndex + 1) % slides.length;
+  slides[currentIndex].style.opacity = 1;
+}
+ 
+setInterval(changeSlide, slideInterval);
+        </script>
+    </div>
+
+    <img class="fon2" src="fon.png" />
+</div>
+
+</body>
+</html>
