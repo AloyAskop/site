@@ -1,0 +1,207 @@
+@import url(fonts.css);
+
+.fs {
+    display: block;
+    height: 600px;
+    margin-bottom: 10px;
+}
+
+.name {
+    z-index: 4;
+    color: rgb(255, 255, 255);
+    font-family: 'Otomanopee One';
+    font-size: calc((100vw - 480px)/(1980 - 480) * (192 - 90) + 90px);
+
+    top: 40%;
+    left: 170px;
+    position: absolute;
+}
+
+
+
+.fon_img {
+    z-index: 1;
+    width: 6%;
+    position: absolute;
+    right: 5%;
+    top: 110px;
+}
+
+
+
+.obl_img {
+    z-index: 2;
+    width: 40%;
+    border-radius: 26px;
+    position: absolute;
+    left: 5%;
+    top: 25px;
+}
+
+.dg {
+    z-index: 1;
+    position: absolute;
+    width: 65%;
+    height: 48px;
+    left: 30%;
+    top: 44px;
+    border-radius: 17px;
+    background: rgb(255, 255, 255);
+
+
+}
+
+.dg p {
+
+    color: rgb(0, 0, 0);
+    font-family: 'Otomanopee One';
+    font-size: 30px;
+    text-align: right;
+    margin-top: 1px;
+    margin-right: 15px;
+}
+
+.YCHcom {
+    position: absolute;
+    width: 30%;
+    height: 48px;
+    right: 23%;
+    top: 120px;
+    border-radius: 28px;
+    background: rgb(108, 75, 137);
+
+    outline: none;
+    border: none;
+}
+
+.YCHcom:hover {
+    background: rgb(220, 211, 228);
+}
+
+.YCHcom p {
+    color: rgb(255, 255, 255);
+    font-family: 'Otomanopee One';
+    font-size: 21px;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.VK {
+    position: absolute;
+    width: 30%;
+    height: 48px;
+    right: 23%;
+    top: 180px;
+    border-radius: 28px;
+    background: rgb(108, 75, 137);
+
+    outline: none;
+    border: none;
+}
+
+.VK:hover {
+    background: rgb(220, 211, 228);
+}
+
+.VK p {
+    color: rgb(255, 255, 255);
+    font-family: 'Otomanopee One';
+    font-size: 21px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+
+.Hipolink {
+    position: absolute;
+    width: 30%;
+    height: 48px;
+    right: 23%;
+    top: 240px;
+    border-radius: 28px;
+    background: rgb(108, 75, 137);
+
+    outline: none;
+    border: none;
+
+}
+
+.Hipolink:hover {
+    background: rgb(220, 211, 228);
+}
+
+
+.Hipolink p {
+    color: rgb(255, 255, 255);
+    font-family: 'Otomanopee One';
+    font-size: 21px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.sc {
+
+    display: block;
+    height: 600px;
+    margin-top: 10px;
+
+}
+
+.del {
+    position: absolute;
+    height: 48px;
+    top: 110%;
+    left: 5%;
+    right: 5%;
+    border-radius: 17px;
+    background: rgb(255, 255, 255);
+
+}
+
+.del p {
+    color: rgb(0, 0, 0);
+    font-family: 'Otomanopee One';
+    font-size: 30px;
+    text-align: left;
+    margin-top: 1px;
+    margin-left: 20px;
+}
+
+
+
+.sl-cn {
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    top: 120%;
+    right: 5%;
+    border-radius: 26px;
+}
+
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.fon2 {
+
+    width: 6%;
+    position: absolute;
+    left: 5%;
+    top: 122%;
+}
+
+
+
+body {
+    height: 200%;
+    min-width: 960px;
+    display: flex;
+    background: rgb(0, 0, 0);
+}
