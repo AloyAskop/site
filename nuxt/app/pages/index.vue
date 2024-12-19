@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const slides = ref([
-   '/1.png',
-   '/2.png',
-   '/3.png',
-   '/4.png',
-   '/5.png',
+   '/1.webp',
+   '/2.webp',
+   '/3.webp',
+   '/4.webp',
+   '/5.webp',
 ])
 
 const activeSlide = ref<number>(0)
@@ -15,13 +15,19 @@ const runSlider = (slideInterval: number = 3000) => {
 onMounted(() => {
    runSlider()
 })
+
+useServerHead({
+   link: [
+      { rel: 'preload', as: 'image', href: '/hero.webp' }
+   ]
+})
 </script>
 
 <template>
    <div>
       <div class="hero__container">
          <div class="hero__main">
-            <img class="hero__image" src="/hero.png" />
+            <img class="hero__image" src="/hero.webp" />
             <p class="hero__title">DECHHI</p>
          </div>
          <div class="hero__links">
@@ -38,8 +44,8 @@ onMounted(() => {
                      Hipolink
                   </a>
                </div>
-               <img class="hero__links__decor" src="/fon.png" />
-               <img class="hero__links__decor mobile" src="/fon-horizontal.png" />
+               <img class="hero__links__decor" src="/fon.webp" />
+               <img class="hero__links__decor mobile" src="/fon-horizontal.webp" loading="lazy" />
             </div>
          </div>
       </div>
@@ -49,7 +55,7 @@ onMounted(() => {
             <p>Gallery and price list</p>
          </div>
          <div class="gallery__slider__container">
-            <img class="gallery__slider__decor" src="/fon.png" />
+            <img class="gallery__slider__decor" src="/fon.webp" />
             <div class="gallery__price">
                <p class="gallery__price__title">Price</p>
                <div class="gallery__price__list">
@@ -105,10 +111,10 @@ onMounted(() => {
             <div class="gallery__slider__wrapper">
                <div class="gallery__slider">
                   <img :src="slide" class="slide" :class="activeSlide === i ? 'opacity-100' : 'opacity-0'"
-                     v-for="slide, i in slides" :key="i" />
+                     v-for="slide, i in slides" :key="i" loading="lazy" />
                </div>
             </div>
-            <img class="gallery__slider__decor mobile" src="/fon-horizontal.png" />
+            <img class="gallery__slider__decor mobile" src="/fon-horizontal.webp" loading="lazy" />
          </div>
       </div>
    </div>

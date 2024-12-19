@@ -4,6 +4,12 @@ const title = 'Dechhi Digital Artist'
 useHead({
    titleTemplate: template => template ? `${template} | ${title}` : title,
 })
+
+useServerHead({
+   link: [
+      { rel: 'preload', as: 'font', href: '/fonts/OtomanopeeOne-Regular.ttf', type: 'font/ttf', crossorigin: 'anonymous' }
+   ]
+})
 </script>
 
 <template>
