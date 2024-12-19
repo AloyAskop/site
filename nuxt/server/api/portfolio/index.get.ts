@@ -9,7 +9,7 @@ type Portfolio = {
    }[]
 }
 
-type SinglePortfolio = {
+export type SinglePortfolio = {
    result: string
    time: number
    payload: {
@@ -22,19 +22,19 @@ type SinglePortfolio = {
    }
 }
 
+const config = useRuntimeConfig()
+
 export default defineCachedEventHandler(async event => {
-   const data = await $fetch<Portfolio>('https://ych.commishes.com/user/history/dech.json')
+   const data = await $fetch<Portfolio>(
+      new URL(config.ych.user, config.ych.baseUrl).toString()
+   )
 
    const result = []
    for (const item of data.payload) {
-      const singleURI = new URL(`${item.url}.json`, 'https://ych.commishes.com')
-      singleURI.searchParams.set('time', `${new Date().getTime()}`)
-
-      const singlePost = await $fetch<SinglePortfolio>(singleURI.toString())
-
+      const singlePost = await $fetch<SinglePortfolio>(`/api/portfolio/${item.url.replace(/^\/(?!\/)/, "")}`)
       result.push({
          id: item.id,
-         url: new URL(item.url, 'https://ych.commishes.com'),
+         url: new URL(item.url, config.ych.baseUrl),
          title: item.title,
          price: item.bid,
          thumb: singlePost.payload.media?.original ?? singlePost.payload.media?.thumb ?? ''

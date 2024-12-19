@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Otomanopee One';
-    src: url('/fonts/OtomanopeeOne-Regular.eot');
-    src: local('Otomanopee One Regular'), local('OtomanopeeOne-Regular'),
-        url('/fonts/OtomanopeeOne-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/OtomanopeeOne-Regular.woff2') format('woff2'),
-        url('/fonts/OtomanopeeOne-Regular.woff') format('woff'),
-        url('/fonts/OtomanopeeOne-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Otomanopee One";
+  src: url("/fonts/OtomanopeeOne-Regular.eot");
+  src: local("Otomanopee One Regular"), local("OtomanopeeOne-Regular"),
+    url("/fonts/OtomanopeeOne-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/OtomanopeeOne-Regular.woff2") format("woff2"),
+    url("/fonts/OtomanopeeOne-Regular.woff") format("woff"),
+    url("/fonts/OtomanopeeOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

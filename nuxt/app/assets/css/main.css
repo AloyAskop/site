@@ -188,71 +188,46 @@ img {
   font-size: 1.5rem;
 }
 
-.gallery__container
-  .gallery__slider__container
-  .gallery__price
-  .gallery__price__title {
+.gallery__container .gallery__slider__container .gallery__price .gallery__price__title {
   text-transform: uppercase;
   font-size: 3rem;
   text-align: center;
 }
 
-.gallery__container
-  .gallery__slider__container
-  .gallery__price
-  .gallery__price__list {
+.gallery__container .gallery__slider__container .gallery__price .gallery__price__list {
   display: grid;
   gap: 2rem;
 }
 
-.gallery__container
-  .gallery__slider__container
-  .gallery__price
-  .gallery__price__category__title {
+.gallery__container .gallery__slider__container .gallery__price .gallery__price__category__title {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   font-size: 2rem;
   text-indent: 25px;
 }
 
-.gallery__container
-  .gallery__slider__container
-  .gallery__price
-  .gallery__price__category__list {
+.gallery__container .gallery__slider__container .gallery__price .gallery__price__category__list {
   display: grid;
   gap: 1rem;
 }
 
-.gallery__container
-  .gallery__slider__container
-  .gallery__price
-  .gallery__price__category__item {
+.gallery__container .gallery__slider__container .gallery__price .gallery__price__category__item {
   display: flex;
   gap: 0.2rem;
 }
 
-.gallery__container
-  .gallery__slider__container
-  .gallery__price
-  .gallery__price__category__item
-  .dots {
+.gallery__container .gallery__slider__container .gallery__price .gallery__price__category__item .dots {
   width: 100%;
   height: 4px;
-  background: repeating-linear-gradient(
-    90deg,
-    black 0,
-    black 4px,
-    transparent 4px,
-    transparent 8px
-  );
+  background: repeating-linear-gradient(90deg,
+      black 0,
+      black 4px,
+      transparent 4px,
+      transparent 8px);
   margin-top: auto;
 }
 
-.gallery__container
-  .gallery__slider__container
-  .gallery__price
-  .gallery__price__category__item
-  p {
+.gallery__container .gallery__slider__container .gallery__price .gallery__price__category__item p {
   flex-shrink: 0;
   line-height: 1;
   vertical-align: baseline;
@@ -269,10 +244,7 @@ img {
   transition: 0.5s;
 }
 
-.gallery__container
-  .gallery__slider__container
-  .gallery__slider
-  img:not(:first-child) {
+.gallery__container .gallery__slider__container .gallery__slider img:not(:first-child) {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -285,9 +257,7 @@ img {
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery__container
-    .gallery__slider__container
-    .gallery__slider__decor.mobile {
+  .gallery__container .gallery__slider__container .gallery__slider__decor.mobile {
     display: block;
   }
 
@@ -314,18 +284,11 @@ img {
 }
 
 @media (max-width: 480px) {
-  .gallery__container
-    .gallery__slider__container
-    .gallery__price
-    .gallery__price__category__item {
+  .gallery__container .gallery__slider__container .gallery__price .gallery__price__category__item {
     flex-wrap: wrap;
   }
 
-  .gallery__container
-    .gallery__slider__container
-    .gallery__price
-    .gallery__price__category__item
-    .dots {
+  .gallery__container .gallery__slider__container .gallery__price .gallery__price__category__item .dots {
     width: min-content;
     flex-grow: 1;
   }

@@ -4,6 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    ych: {
+      baseUrl: 'https://ych.commishes.com',
+      user: '/user/history/dech.json'
+    }
+  },
+
   future: {
     compatibilityVersion: 4
   },
