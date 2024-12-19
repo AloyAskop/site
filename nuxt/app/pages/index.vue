@@ -1,21 +1,20 @@
 <script setup lang="ts">
+const slides = ref([
+   '/1.png',
+   '/2.png',
+   '/3.png',
+   '/4.png',
+   '/5.png',
+])
+
+const activeSlide = ref<number>(0)
+const runSlider = (slideInterval: number = 3000) => {
+   setInterval(() => activeSlide.value = (activeSlide.value + 1) % slides.value.length, slideInterval)
+}
+
 onMounted(() => {
-   const slides = document.querySelectorAll(
-      ".gallery__container .gallery__slider__container .gallery__slider img"
-   );
-   const slideInterval = 3000;
-
-   let currentIndex = 0;
-   function changeSlide() {
-      (slides[currentIndex]! as HTMLDivElement).style.opacity = '0';
-      currentIndex = (currentIndex + 1) % slides.length;
-      (slides[currentIndex]! as HTMLDivElement).style.opacity = '1';
-   }
-
-   setInterval(changeSlide, slideInterval);
+   runSlider()
 })
-
-await useFetch('/api/portfolio')
 </script>
 
 <template>
@@ -105,11 +104,8 @@ await useFetch('/api/portfolio')
             </div>
             <div class="gallery__slider__wrapper">
                <div class="gallery__slider">
-                  <img src="/1.png" class="slide" />
-                  <img src="/2.png" class="slide" />
-                  <img src="/3.png" class="slide" />
-                  <img src="/4.png" class="slide" />
-                  <img src="/5.png" class="slide" />
+                  <img :src="slide" class="slide" :class="activeSlide === i ? 'opacity-100' : 'opacity-0'"
+                     v-for="slide, i in slides" :key="i" />
                </div>
             </div>
             <img class="gallery__slider__decor mobile" src="/fon-horizontal.png" />
