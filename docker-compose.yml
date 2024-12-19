@@ -1,0 +1,13 @@
+services:
+  nuxt:
+    container_name: nuxt
+    build:
+      context: .
+      dockerfile: ./nuxt/DockerFile
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nuxt/:/app
+    # env_file: ".env"
