@@ -5,7 +5,14 @@ useHead({
    titleTemplate: template => template ? `${template} | ${title}` : title,
 })
 
+useSeoMeta({
+   description: 'Dechhi Digital Artist showcase website'
+})
+
 useServerHead({
+   htmlAttrs: {
+      lang: 'en'
+   },
    link: [
       { rel: 'preload', as: 'font', href: '/fonts/OtomanopeeOne-Regular.ttf', type: 'font/ttf', crossorigin: 'anonymous' }
    ]

@@ -14,7 +14,7 @@ defineProps<{
 
 <template>
    <div>
-      <a class="block aspect-[2/3]" :href="item.url" target="_blank">
+      <a class="block aspect-[2/3]" :href="item.url" target="_blank" aria-label="Link to ych.commishes.com Portfolio">
          <img class="object-cover w-full h-full rounded-lg" :src="item.thumb" :alt="item.title" loading="lazy">
       </a>
       <div class="flex flex-wrap justify-between text-lg mt-2">
