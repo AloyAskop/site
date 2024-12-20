@@ -40,6 +40,12 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    '/portfolio': {
+      swr: true
+    }
+  },
+
   nitro: {
     prerender: {
       routes: [
