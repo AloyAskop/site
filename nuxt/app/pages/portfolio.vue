@@ -2,6 +2,10 @@
 import type { Portfolio } from '~/components/Portfolio/Card.vue';
 
 const { data, status, error } = await useLazyFetch<{ portfolio: Portfolio[] }>('/api/portfolio')
+
+useSeoMeta({
+   title: 'Gallery'
+})
 </script>
 
 <template>
