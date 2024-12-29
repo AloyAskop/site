@@ -24,7 +24,7 @@ export type SinglePortfolio = {
 
 const config = useRuntimeConfig()
 
-export default defineCachedEventHandler(async event => {
+export default defineEventHandler(async event => {
    const data = await $fetch<Portfolio>(
       new URL(config.ych.user, config.ych.baseUrl).toString()
    )
@@ -42,4 +42,4 @@ export default defineCachedEventHandler(async event => {
    }
 
    return { portfolio: result }
-}, { swr: true })
+})

@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/portfolio': {
-      swr: true
+      isr: true
     }
   },
 
